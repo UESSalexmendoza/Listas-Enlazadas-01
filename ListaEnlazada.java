@@ -6,10 +6,8 @@ public class ListaEnlazada {
     }
 
     // Insertar un nuevo nodo al final
-    public void insertarAlFinal(String nombre, String apellidos, String direccion, String telefono,
-            String fechaNacimiento) {
+    public void insertarAlFinal(String nombre, String apellidos, String direccion, String telefono, String fechaNacimiento) {
         Nodo nuevoNodo = new Nodo(nombre, apellidos, direccion, telefono, fechaNacimiento);
-
         if (primerNodo == null) {
             primerNodo = nuevoNodo;
             return;
@@ -24,10 +22,8 @@ public class ListaEnlazada {
     }
 
     // Insertar antes de un nodo en la posición 'indice' (empezando en 0)
-    public void insertarAntesPorIndice(int indice, String nombre, String apellidos, String direccion, String telefono,
-            String fechaNacimiento) {
+    public void insertarAntesPorIndice(int indice, String nombre, String apellidos, String direccion, String telefono, String fechaNacimiento) {
         Nodo nuevoNodo = new Nodo(nombre, apellidos, direccion, telefono, fechaNacimiento);
-
         // Caso especial: insertar antes del primer nodo (índice 0)
         if (indice == 0) {
             nuevoNodo.siguiente = primerNodo;
